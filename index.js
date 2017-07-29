@@ -9,7 +9,7 @@ var RCTUIManager = React.NativeModules.UIManager;
 
 var RefreshLayoutConsts = require('NativeModules').UIManager.RNRefreshScrollView.Constants;
 
-var onlyChild = require('onlyChild');
+var onlyChild = Platform.OS == 'ios' ? React.onlyChild : React.Children.only;//for 0.46.4
 
 var S_REF = 'RNRefreshScrollView';
 
